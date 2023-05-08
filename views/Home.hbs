@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{>Main}} 
+<body>
+   <div class="home">
+        <div class="decor"></div>
+        <div class="home-case">
+            <div class="home-box">
+                <div class="typewriter">
+                    <h1> Hej, jag heter Carl Johan</h1>
+                </div>
+                <div class="typewriter1">
+                    <h1> Systemutvecklare</h1>
+                </div>
+                <div class="typewriter2">
+                    <h1>Göteborg</h1>
+                    <p>SOS22GB</p>
+                </div>
+            </div>
+            <a class="home-button" href="/work">Senaste skolprojektet "Funkar inte"</a> <!-- en länk till en annan sida på webbplatsen (ej igång ännu)-->
+            <a class="home-button" href="/contact">Snacka jobb?</a> <!-- länk till formuläret contact -->
+        </div>
+   </div>
+<p>Här är en lista över alla kontakter:</p>
+   <table>
+      <thead>
+         <tr>
+            <th>Namn</th>
+            <th>Email</th>
+            <th>Ämne</th>
+            <th>Meddelande</th>
+         </tr>
+      </thead>
+      <tbody>
+         {{#each contacts}} <!-- loopar igenom en lista med kontakter och visar deras information -->
+         <tr>
+            <td>{{fullname}}</td>
+            <td>{{email}}</td>
+            <td>{{subject}}</td>
+            <td>{{note}}</td>
+         </tr>
+         {{/each}}
+      </tbody>
+   </table>
+   <button onclick="window.location.reload();">Uppdatera tabell</button> <!-- knapp för uppdatering av tabellinfo -->
+   <footer>
+      <p>Copyright © 2023 Carl Johan. All rights reserved.</p>
+   </footer>
+</body>
+</html>

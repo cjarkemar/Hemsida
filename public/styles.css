@@ -1,0 +1,252 @@
+
+@font-face {
+    font-family: fontLight;
+    src: url(fonts/futura\ light\ bt.ttf);
+}
+@font-face {
+    font-family: fontBold;
+    src: url(fonts/FuturaBoldfont.ttf);
+}
+@font-face {
+    font-family: brandonLight;
+    src: url(fonts/brandon-grotesque-light-58a8a4b38001d.otf);
+}
+@font-face {
+    font-family: brandonBold;
+    src: url(fonts/brandon-grotesque-black-58a8a3e824392.otf);
+}
+
+body{
+    
+    font-family: fontLight;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    z-index: 5;
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0,2);
+}
+
+.name {
+    text-decoration: none;
+    font-family: brandonBold;
+    font-size: 20px;   
+    position:absolute;
+    top: 20px;
+    left: 30px;
+    color:#000;
+    letter-spacing: 0.5px;
+
+}
+
+#bars {
+    color: #7f7d7a;
+    position: absolute;
+    top: 22px;
+    right: 21px;
+    font-size: 20px;
+}
+
+#bars:hover{
+    color: #adeadb;
+}
+
+.menu-slide {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index:20;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    transition: 0.5s;
+    padding-top:60px;
+    overflow-x:hidden;
+
+}
+
+.menu-slide a {
+    padding:8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 23px;
+    color:#818181;
+    display: block;
+    transition: 0.3s;
+    font-family: brandonLight;
+    text-transform: uppercase;
+    letter-spacing: 5px;    
+}
+
+.menu-slide a:hover {
+    color:#f1f1f1;
+}
+
+.menu-slide .menu-x {
+    padding:0px 0px 0px 20px;
+    margin-top: 0px;
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    margin-left: 50px;
+
+}
+#menu-overlay {
+    width: 0;
+    opacity: 0.7;
+    background: #000;
+    height: 100%;
+    z-index: 15;
+    top: 62px;
+    left: 0;
+    position: fixed;
+}
+
+.home {
+    height: 100vh;
+    width: 80%;
+    margin:auto;
+    text-align: center;
+}
+
+.home-case {
+    width: 450px;
+    height: 360px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-box {
+    display: inline-block;
+    background-color: #fff;
+    border: 1.4px solid #000;
+    width: 450px;
+    height: 248px;
+    margin: 0;
+    color: #818181;
+    font-family: brandonLight;
+    font-size: 14px;
+    letter-spacing: 3px;
+
+}
+.home-button {
+    text-decoration: none;
+    display: inline-block;
+    font-family: brandonBold;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    margin: 24px;
+    margin-top: 70px;
+}
+.typewriter h1, .typewriter1 h1, .typewriter2 h1 {
+    overflow:hidden;
+    white-space:nowrap;
+    margin:0 auto;
+    animation: 
+        typing 3.5s steps(40,end),
+        blink-caret .75s step-end infinite;
+    animation-fill-mode: both;
+}
+@keyframes typing {
+    from {width:0}
+    to {width:100%}
+}
+@keyframes blink-caret {
+    from, to {border-color: transparent;}
+    50% {border-color: orange}
+}
+.typewriter h1{
+    margin-top: 55px;
+}
+.typewriter1 h1 {
+    animation-delay: 2.5s;
+}
+.typewriter2 h1 {
+    animation-delay: 4s;
+}
+
+.contact-container{
+    width: 60%;
+    margin: auto;
+    color: #818181
+}
+
+.contact-title{
+    margin-top: 180px;
+    margin-bottom: 18px;
+    font-family: brandonBold;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 4.5px;
+    color:#818181
+}
+.contact-form {
+    font-family: fontLight;
+    font-size: 17px;
+
+}
+.contact-lable {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 18px;
+}
+
+input[ type ="text"], select {
+    width: 93%;
+    font-size: 17px;
+    font-family: fontLight;
+    background-color: #f5f5f5;
+    padding:22px 14px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+}
+#contact-thankyou{
+    display: none;
+}
+
+.table-container {
+    border: 2px solid #000;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table-container {
+    border: 2px solid #000;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2);
+    padding: 20px;
+}

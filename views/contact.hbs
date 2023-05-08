@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body> 
+        {{>Main}}
+        <!-- Inkluderar Main-template (handlebars)-->
+
+        <div class="contact-container">
+            <div class = "contact-title">Skriv om du vill ta ett snack!</div>
+            
+
+            <form class = "contact-form" id = "contact-form" action = "/contact" method = "POST">
+                <!-- Ett formulär med klassen "contact-form" och ID "contact-form". Formuläret skickar en POST-förfrågan till "/contact" när användaren klickar på Skicka-knappen. -->
+
+                <div class = "contact-label"> Ditt namn</div>
+                
+                <input type = "text" id = "fullname" name="fullname" placeholder="Ditt namn...">
+
+                <div class = "contact-label"> Din email</div>
+                
+                <input type = "text" id = "email" name="email" placeholder="Din e-postadress...">
+
+                <div class = "contact-label">Vill du ställa en fråga? Skriv det ämne det gäller i raden under.</div>
+                
+                <input type = "text" id = "subject" name="subject" placeholder="">
+
+                <div class = "contact-label">Mycket att skriva?</div>
+               
+                <textarea rows = "5 cols"= "50" id = "note" name="note" placeholder="Utöka din fråga här om det behövs!"></textarea>
+
+                <input type = "submit" value="Skicka" onclick = "hideContact()">
+                <!-- En knapp för att skicka form -->
+            </form>
+
+            <div id="contact-thankyou">Tack för att du skriver till mig! Jag återkommer inom kort!</div>
+           
+        </div>
+        
+</html>

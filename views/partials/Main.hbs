@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- koppling till en CSSfilen -->
+    <link rel="stylesheet" href="/styles.css">
+    <!-- länk till en hemsida med icons online, rätt coolt så slipper man ladda ner. kul att testa -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+</head>
+<!-- navigationsmeny(typ som en header) -->
+<div class="navbar">
+    
+    <a class="name" href="/">CJ´s TECH PORFTOLIO PAGE</a>
+    <!-- hamburger-menu(därifrån ikonen från fontawesome) -->
+    <i id="bars" class="fas fa-bars" onclick="openMenu()"></i>
+</div>
+<!-- en overlay som täcker hela skärmen och visas när menyn är öppnad -->
+<div id="menu-overlay"></div>
+<!-- själva menyn som visas när användaren klickar på hamburgarmenyn -->
+<div id="menu-slide" class="menu-slide">
+    <!-- en "stängmeny"-knapp som visas när menyn är öppen -->
+    <a href="javascript:void(0)" class="menu-x" onclick="closeMenu()">&times;</a>
+    <!-- länkar till undersidor. Contact funkar bara än så länge -->
+    <a href="/work";>Work</a>
+    <a href="/about";>About</a>
+    <a href="/contact";>Contact</a> 
+</div>
+</html>
+
+<!-- öppning/stängning meny -->
+<script>
+    function openMenu(){
+    // hämta elementet med id "menu-slide" och sätt bredden till 300 pixlar
+    var divMenuSlide = document.getElementById("menu-slide");
+    divMenuSlide.style.width= "300px";
+    // bredden på overlay till 100% så att det täcker hela skärmen
+    document.getElementById("menu-overlay").style.width = "100%";
+    }
+    function closeMenu(){
+        // bredden på menye till 0 för att dölja det
+        document.getElementById("menu-slide").style.width = "0";
+        // sätt bredden på overlay till 0 för att dölja det
+        document.getElementById("menu-overlay").style.width = "0";
+    }
+</script>
+// 
